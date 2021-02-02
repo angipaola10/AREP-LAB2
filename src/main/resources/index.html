@@ -18,7 +18,7 @@
                         <h4 class="my-0 fw-normal">Calculator</h4>
                     </div>
                     <div class="card-body">
-                        <h4>Type numbers separated by "," without whitespaces.</h4>
+                        <h4>Type two or more numbers separated by "," without whitespaces.</h4>
                         <h6>Example: 123,567,678,234,590</h6>
                         <textarea class="form-control mt-4 mb-2" id="values"></textarea>
                         <div class="form-check form-check-inline">
@@ -29,18 +29,18 @@
                             <input class="form-check-input" type="checkbox" id="standardDeviation">
                             <label class="form-check-label" for="standardDeviation">Standard deviation</label>
                         </div>
-                        <button type="button" class="w-100 btn btn-lg btn-primary mt-4" onclick="calculate(values.value, mean.checked, standardDeviation.checked)">Calculate</button>
+                        <button type="button" class="w-100 btn btn-lg btn-primary mt-4" onclick="client.calculate(values.value, mean.checked, standardDeviation.checked)">Calculate</button>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card mb-4 shadow-sm" style="visibility: hidden">
+                <div class="card mb-4 shadow-sm" id="divResult" style="visibility: hidden">
                     <div class="card-header text-center">
                         <h4 class="my-0 fw-normal">Result</h4>
                     </div>
                     <div class="card-body">
-                        <h4 class="m-4">Arithmetic mean: <small class="text-muted"> 00</small></h4>
-                        <h4 class="m-4">Standard deviation: <small class="text-muted"> 00</small></h4>
+                        <h4 class="m-4" id="meanResult" style="visibility: hidden"></h4>
+                        <h4 class="m-4" id="stdResult" style="visibility: hidden"></h4>
                     </div>
                 </div>
             </div>

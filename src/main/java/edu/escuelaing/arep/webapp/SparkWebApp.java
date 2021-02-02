@@ -22,15 +22,15 @@ public class SparkWebApp
         });
 
         post("/calculator/mean",(req,res) ->{
-            Double mean = Calculator.mean( req.body() );
+            String mean = "{\"mean\":"+Calculator.mean( req.body() )+"}";
             Gson gson = new Gson();
-            return mean;
+            return gson.toJson(mean);
         });
 
         post("/calculator/standardDeviation",(req,res) ->{
-            Double mean = Calculator.standardDeviation( req.body() );
+            String std = "{\"std\":" +Calculator.standardDeviation( req.body() )+"}";
             Gson gson = new Gson();
-            return gson.toJson(mean);
+            return gson.toJson(std);
         });
     }
 
