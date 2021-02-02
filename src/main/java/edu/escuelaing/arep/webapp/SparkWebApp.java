@@ -6,11 +6,18 @@ import com.google.gson.Gson;
 import static spark.Spark.*;
 
 /**
- * Hello world!
+ * Main class that define endpoints to use the statistics calculator.
  *
+ * @author Angi Paola Jimenez Pira
+ * @version 1.0
  */
 public class SparkWebApp
 {
+    /**
+     * This main method uses SparkWeb static methods and lambda functions to
+     * create a simple web app. It maps the lambda function to the
+     * / relative URL.
+     */
     public static void main(String[] args) {
 
         port(getPort());
@@ -34,6 +41,13 @@ public class SparkWebApp
         });
     }
 
+    /**
+     * This method reads the default port as specified by the PORT variable in
+     * the environment.
+     *
+     * Heroku provides the port automatically so you need this to run the
+     * project on Heroku.
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));

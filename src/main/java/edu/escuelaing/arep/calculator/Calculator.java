@@ -51,6 +51,22 @@ public class Calculator {
         return standardDeviation;
     }
 
+    /**
+     * Calculates the standard deviation of a set of double values.
+     *
+     * @param values Linked List with the values to calculate the mean
+     * @return Standard deviation of the values
+     */
+    public static double standardDeviation(LinkedList<Double> values){
+        double standardDeviation = 0.0;
+        double mean = mean(values);
+        for(double value: values){
+            standardDeviation += Math.pow( (value - mean), 2);
+        }
+        standardDeviation = Math.sqrt( standardDeviation / (values.size() - 1) );
+        return standardDeviation;
+    }
+
 
     private static LinkedList<Double> generateLinkedList(String line){
         String[] list = line.split(",");
