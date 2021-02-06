@@ -47,9 +47,11 @@ This project is implement a basic extendable statistics calculator with two main
     
 2. If you want test the endpoints that calculate the mean and standard deviation, you can do it using [postman](https://www.postman.com/). This endpoints only accept text on the body request. Examples:
 
-    * Testing endpoint: https://sparkapp-arep.herokuapp.com/calculator/mean
+    * Testing endpoint: https://sparkapp-arep.herokuapp.com/calculator/mean :
+    ![mean](img/testmean.png)
     
-    * Testing endponit: https://sparkapp-arep.herokuapp.com/calculator/standardDeviation
+    * Testing endponit: https://sparkapp-arep.herokuapp.com/calculator/standardDeviation :
+    ![std](img/teststd.png)
     
 
 ## Build With
